@@ -14,6 +14,7 @@
 */
 
 /* HTML Styles */
+/* Background image set and scaled to 100%. Background fixed to page. */
 html {
     background: url("sd_back1.png");
     background-size: 100%;
@@ -21,26 +22,39 @@ html {
 }
 
 /* Body Styles */
+/* Added background star image to body. Added four seperate radial gradients with different sizes and stops, then added background color beneath those. Added a box shadow to both sides of the body using positive and negative horizontal values.  */
 body {
     background: url("sd_back2.png"),
-        radial-gradient(circle closest-corner at 70% 40%, white 15%, rgba(151, 151, 151, 0.5) 50%),
+        radial-gradient(circle closest-corner at 40% 70%, white 15%, rgba(151, 151, 151, 0.5) 50%),
         radial-gradient(circle closest-corner at 80% 40%, white 15%, rgba(0, 0, 0, 0) 30%),
         radial-gradient(closest-side at 10% 20%, white 20%, rgba(0, 0, 0, 0) 45%),
         radial-gradient(5% 5% at 90% 10%, white 15%, rgba(0, 0, 0, 0) 40%),
         rgb(151, 151, 151);
-    box-shadow:
+    box-shadow: rgb(31, 31, 31) 30px 0px 45px, rgb(31, 31, 31) -30px 0px 45px;
 }
 
-
-
 /* Navigation List Styles */
-
-
-
+/* Added an five pixel outset border in light blue. */
+body>header a {
+    border: 5px outset rgb(211, 211, 255);
+}
 
 /* Section Left Styles */
+/* Added a text shadow to article with a blur of 5 pixels and no offset. Set text color. */
+section#left article h1 {
+    text-shadow: black 0 0 5px;
+    color: rgb(211, 211, 211);
+}
 
-
-
+/* Added dropshadow with -15px horizontal offset. Added a graysacle filter of .7. Transformed image by flipping it across the Y-axis resulting in a flipped image. */
+img#mportrait {
+    filter: drop-shadow(-15px 0 5px rgba(51, 51, 51, 0.9)) grayscale(.7);
+    opacity: .6;
+    transform: rotateY(180deg);
+}
 
 /* Footer Styles */
+/* Added border to the top of the footer. Applied a 2 pixel solid grey border. */
+footer {
+    border-top: 2px solid rgb(171, 171, 171);
+}
